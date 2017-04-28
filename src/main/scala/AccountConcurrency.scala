@@ -9,7 +9,7 @@ object AccountConcurrency {
     val t = startThread(a1, a2, 150000)
     val s = startThread(a2, a1, 150000)
     t.join()
-    t.join()
+    s.join()
   }
 
   def startThread(a: Account, b: Account, n: Int) = {
